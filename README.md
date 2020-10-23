@@ -1,123 +1,76 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+    <img alt="Gatsby" src="https://4.bp.blogspot.com/-rtNRVM3aIvI/XJX_U07Z-II/AAAAAAAAJXY/YpdOo490FTgdKOxM4qDG-2-EzcNFAWkKACK4BGAYYCw/s1600/logo%2Bfirebase%2Bicon.png" width="60" />
   </a>
 </p>
 <h1 align="center">
-  eleven x gatsby starter
+  Firebase 101 on Gatsby x React
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Create a Gatsby app with basic Firebase and no data in it.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
-## 🚀 Quick start
+1.  **Create the Firebase project**
 
-1.  **Create a Gatsby site.**
+     1. Go on https://console.firebase.google.com/u/1/ and click on ``Add project``
+     1. Add a name to your project, then click on ``Continue``
+     1. Enable Google Analytics if you want to, then click on ``Continue``
+     1. Your Firebase project has been created!
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new <APP_NAME> https://github.com/11-eleven/gatsby-template.git
+1. **Enable Firestore**
+
+    1. Click on ``Cloud Firestore`` on the leftside menu
+    1. Click on ``Create database``
+    1. For developing purposes, select ``Start in test mode`` so you can write and read data however you want it. Remember to change it back when your website is in production.
+    1. Press on ``Next`` and select the region you want. ``nam5 (us-central)`` is fine if you are in Eastern America
+    1. Then click on ``Enable`` when you are done
+    1. Firestore has now been enabled for your Firebase project!
+
+
+1. **Add Firebase to your app**
+    1. Go back to ``Project Overview``
+    1. In the hero section, you can see ``Get started by adding Firebase to your app``
+    1. Click on the type of application you are developing. If it's for web, click on ``Web``
+    1. Register your app by adding an app nickname
+    1. If you wish to host your app on Firebase, check the ``Also enable Firebase hosting for this app`` box
+    1. When you are done, click on ``Register app``
+    1. You'll then see your ``firebaseConfig`` keys. We'll come back to that later
+    1. Click on ``Continue to console``
+    1. Your app has been registered!
+ 
+ 1. **Create your Gatsby app**
+    1. If you haven't already, create your Gatsby application. You can clone eleven's gatsby template:
     ```
+    gatsby new <APP_NAME> https://github.com/11-eleven/gatsby-template.git # Replace <APP_NAME> by a name of your choice
 
-1. **Then go into the folder you just created**
-
-   ```cd <APP_NAME>```
-
-1. **At eleven, we are politically correct.**
-    So rename the base branch to `main` instead of `master`. In your terminal:
-     ```git checkout -b main # Creating new base branch
-     git rebase --onto main master # Moving everything from master to amin, base branch is now called main
-     hub create # Create a git repo
-     git push -u origin main # Push everything to Github
-     
- 
- 
-
-1. **Transfer ownership to 11-eleven**
-    Go on `github.com`, to the repo you just created, and transfer ownership to 11-eleven.
-    
-  
-1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
+    ```
+    1. Then open your project in your code editor
+    ```
     cd <APP_NAME>
-    gatsby develop
+    code . # If you are using Visual Studio Code
     ```
-    
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `<APP_NAME>` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-
-
-1. **Deploy on Netlify**
-
-    [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/11-eleven/gatsby-template)
-
-
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
+  
+ 1. **Configure Firebase for your Gatsby project**
+    1. In your ``src`` folder, create another folder called  ``utils``
+    1. Inside the newly create ``utils`` folder, create a file called ``firebase.js``
+    1. In ``firebase.js``, we'll put all of our configuration for Firebase
+    1. Go back on the Firebase website. Next to ``Project Overview``, click on the gear icon, then on ``Project settings``
+    1. Scroll down, and you'll see your configuration keys. Copy your ``firebaseCongif`` and the ``initializeApp`` code
+       ```
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "XXXXX-XXXXX",
+          authDomain: "XXXXX.firebaseapp.com",
+          databaseURL: "https://XXXXX.firebaseio.com",
+          projectId: "XXXXX",
+          storageBucket: "XXXXX.appspot.com",
+          messagingSenderId: "XXXXX",
+          appId: "XXXXX"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+       ```
+   
 <!-- AUTO-GENERATED-CONTENT:END -->
