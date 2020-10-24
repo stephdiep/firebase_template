@@ -11,7 +11,7 @@
 Create a Gatsby app with basic Firebase and no data in it.
 
 
-### Create the Firebase project ###
+## Create the Firebase project ##
 
 1.  Go on https://console.firebase.google.com/u/1/ and click on ``Add project``
 
@@ -22,7 +22,7 @@ Create a Gatsby app with basic Firebase and no data in it.
 1. Your Firebase project has been created! 🎉
 
 
-### Enable Firestore ###
+## Enable Firestore ##
 
 1. Click on ``Cloud Firestore`` on the leftside menu
 
@@ -37,7 +37,7 @@ Create a Gatsby app with basic Firebase and no data in it.
 1. Firestore has now been enabled for your Firebase project! 🎉
 
 
-### Add Firebase to your app ###
+## Add Firebase to your app ##
 
 1. Go back to ``Project Overview``
 
@@ -58,7 +58,7 @@ Create a Gatsby app with basic Firebase and no data in it.
 1. Your app has been registered! 🎉
 
 
-### Create your Gatsby app ###
+## Create your Gatsby app ##
 
 1. If you haven't already, create your Gatsby application. You can clone eleven's gatsby template:
 ```
@@ -73,7 +73,7 @@ code . # If you are using Visual Studio Code
 ```
 
 
-### Configure Firebase for your Gatsby project ###
+## Configure Firebase for your Gatsby project ##
 
 1. In your ``src`` folder, create another folder called  ``utils``
 
