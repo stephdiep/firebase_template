@@ -11,7 +11,7 @@
 Create a Gatsby app with basic Firebase and no data in it.
 
 
-## Create the Firebase project ##
+## Create the Firebase project 🔥 ##
 
 1.  Go on https://console.firebase.google.com/u/1/ and click on ``Add project``
 
@@ -22,7 +22,7 @@ Create a Gatsby app with basic Firebase and no data in it.
 1. Your Firebase project has been created! 🎉
 
 
-## Enable Firestore ##
+## Enable Firestore 💾 ##
 
 1. Click on ``Cloud Firestore`` on the leftside menu
 
@@ -37,7 +37,7 @@ Create a Gatsby app with basic Firebase and no data in it.
 1. Firestore has now been enabled for your Firebase project! 🎉
 
 
-## Add Firebase to your app ##
+## Add Firebase to your app 🥪 ##
 
 1. Go back to ``Project Overview``
 
@@ -58,12 +58,12 @@ Create a Gatsby app with basic Firebase and no data in it.
 1. Your app has been registered! 🎉
 
 
-## Create your Gatsby app ##
+## Create your Gatsby app 💻 ##
 
 1. If you haven't already, create your Gatsby application. You can clone eleven's gatsby template:
 ```
-gatsby new <APP_NAME> https://github.com/11-eleven/gatsby-template.git # Replace <APP_NAME> by a name of your choice
-
+# Replace <APP_NAME> by a name of your choice
+gatsby new <APP_NAME> https://github.com/11-eleven/gatsby-template.git 
 ```
 
 2. Then open your project in your code editor
@@ -73,7 +73,7 @@ code . # If you are using Visual Studio Code
 ```
 
 
-## Add your configuration keys your Gatsby project ##
+## Add your configuration keys your Gatsby project 🗝️ ##
 
 1. In your ``src`` folder, create another folder called  ``utils``
 
@@ -85,7 +85,6 @@ code . # If you are using Visual Studio Code
 
 5. Scroll down, and you'll see your configuration keys. Copy your ``firebaseCongif`` code
  ```
-  // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "XXXXX-XXXXX",
     authDomain: "XXXXX.firebaseapp.com",
@@ -113,14 +112,14 @@ code . # If you are using Visual Studio Code
   };
   ```
 
-8. You can fix your ``firebase.js`` file if you wish to, by changin ``var`` to ``const``
+8. You can fix your ``firebase.js`` file if you wish to, by changing ``var`` to ``const``
   ```
     const firebaseConfig = {
       <CONFIGURATION_KEYS_HERE>
     };
   ```
 
-## Import and install Firebase to your Gatsby project ##
+## Import and install Firebase to your Gatsby project ⏳ ##
 
 1. Import Firebase in your ``firebase.js`` file
  At the top of the file, on line 1, add 
@@ -149,6 +148,7 @@ code . # If you are using Visual Studio Code
   ```
   Here, instead of only using ``firebase.initializeApp(firebaseConfig)``, we are only initializing Firebase if there is a window to not overload our application when it is building. Then, we are exporting it.
 
+4. Firebase has been configured and you are ready to start using it in your app! 🎉
 
 
 <!-- AUTO-GENERATED-CONTENT:END -->
