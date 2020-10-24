@@ -1,4 +1,7 @@
-  // Your web app's Firebase configuration
+ // Import firebase
+ import firebase from 'firebase'
+ 
+ // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -9,4 +12,14 @@
     appId: process.env.FIREBASE_APP_ID
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  let instance
+
+  export default function getFirebase() {
+    if (typeof window !== "undefined") {
+      if (instance) return instance
+      instance = firebase.initializeApp(firebaseConfig);
+      return instance
+    }
+  
+    return null
+  }
