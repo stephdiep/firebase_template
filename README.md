@@ -66,24 +66,24 @@ gatsby new <APP_NAME> https://github.com/11-eleven/gatsby-template.git # Replace
 
 ```
 
-1. Then open your project in your code editor
+2. Then open your project in your code editor
 ```
 cd <APP_NAME>
 code . # If you are using Visual Studio Code
 ```
 
 
-## Configure Firebase for your Gatsby project ##
+## Add your configuration keys your Gatsby project ##
 
 1. In your ``src`` folder, create another folder called  ``utils``
 
-1. Inside the newly create ``utils`` folder, create a file called ``firebase.js``
+2. Inside the newly create ``utils`` folder, create a file called ``firebase.js``
 
-1. In ``firebase.js``, we'll put all of our configuration for Firebase
+3. In ``firebase.js``, we'll put all of our configuration for Firebase
 
-1. Go back on the Firebase website. Next to ``Project Overview``, click on the gear icon, then on ``Project settings``
+4. Go back on the Firebase website. Next to ``Project Overview``, click on the gear icon, then on ``Project settings``
 
-1. Scroll down, and you'll see your configuration keys. Copy your ``firebaseCongif`` code
+5. Scroll down, and you'll see your configuration keys. Copy your ``firebaseCongif`` code
  ```
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -97,10 +97,10 @@ code . # If you are using Visual Studio Code
   };
  ```
 
-1. Add your configuration keys in your untracked ``.env`` file
+6. Add your configuration keys in your untracked ``.env`` file
  For example, if my Firebase ``projectID`` is ``myapp``, I'll add ``FIREBASE_API_KEY=myapp`` in my ``.env`` file. Then I'll do the same for each Firebase configuration key
 
-1. Change all your configuration keys to the keys in your ``.env`` file
+7. Change all your configuration keys to the keys in your ``.env`` file
   ```
   var firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
@@ -113,25 +113,27 @@ code . # If you are using Visual Studio Code
   };
   ```
 
+8. You can fix your ``firebase.js`` file if you wish to, by changin ``var`` to ``const``
+  ```
+    const firebaseConfig = {
+      <CONFIGURATION_KEYS_HERE>
+    };
+  ```
+
+## Import and install Firebase to your Gatsby project ##
+
 1. Import Firebase in your ``firebase.js`` file
  At the top of the file, on line 1, add 
  ```
  import firebase from 'firebase'
  ```
 
-1. Install Firebase through your terminal
+2. Install Firebase through your terminal
  ```
  npm i --save firebase
  ```
 
-1. You can fix your ``firebase.js`` file if you wish to, by changin ``var`` to ``const``
-```
-  const firebaseConfig = {
-    <CONFIGURATION_KEYS_HERE>
-  };
-```
-
-1. After the ``firebaseConfig`` code, initialize Firebase. 
+3. After the ``firebaseConfig`` code, initialize Firebase. 
   ```
   let instance
 
