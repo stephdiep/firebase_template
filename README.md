@@ -121,7 +121,7 @@ code . # If you are using Visual Studio Code
 
 ## Import and install Firebase to your Gatsby project ⏳ ##
 
-1. Import Firebase in your ``firebase.js`` file
+1. Import Firebase in your ``firebase.js`` file <br>
  At the top of the file, on line 1, add 
  ```
  import firebase from 'firebase'
@@ -146,7 +146,7 @@ code . # If you are using Visual Studio Code
     return null
   }
   ```
-  Here, instead of only using ``firebase.initializeApp(firebaseConfig)``, we are only initializing Firebase if there is a window to not overload our application when it is building. Then, we are exporting it.
+   Here, instead of only using ``firebase.initializeApp(firebaseConfig)``, we are only initializing Firebase if there is a window to not overload our application when it is building. Then, we are exporting it.
 
 4. Firebase has been configured and you are ready to start using it in your app! 🎉
 
