@@ -124,7 +124,7 @@ code . # If you are using Visual Studio Code
 1. Import Firebase in your ``firebase.js`` file <br>
  At the top of the file, on line 1, add 
  ```
- import firebase from 'firebase'
+ import firebase from 'firebase/app'
  ```
 
 2. Install Firebase through your terminal
